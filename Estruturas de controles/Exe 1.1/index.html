@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nota</title>
+</head>
+<body>
+
+<div>
+
+    <input type="number" id="notaAluno" placeholder="Digite a nota (0 a 10)" step="0.1">
+   
+    
+    <button onclick="verificarNota()">Verificar</button>
+   
+    
+    <p id="resultado"></p>
+</div>
+
+<script>
+    
+    function verificarNota() {
+    
+        let nota = document.getElementById('notaAluno').value;
+
+        
+        nota = Number(nota);
+
+        
+        if (nota >= 7 && nota <= 10) {
+            document.getElementById('resultado').innerText = "Aprovado.";
+        } else if (nota >= 5 && nota < 7) {
+            document.getElementById('resultado').innerText = "Substituição.";
+        } else if (nota >= 0 && nota < 5) {
+            document.getElementById('resultado').innerText = "Reprovado.";
+        } else {
+            document.getElementById('resultado').innerText = "Nota inválida. Digite um valor entre 0 e 10.";
+        }
+    }
+</script>
+
+</body>
+</html>

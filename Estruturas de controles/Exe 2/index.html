@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Switch - Dias da Semana</title>
+</head>
+<body>
+
+<div>
+    
+    <input type="number" id="diaSemana" placeholder="Digite um número de 1 a 7">
+   
+
+    <button onclick="verificarDia()">Verificar</button>
+   
+    
+    <p id="resultado"></p>
+</div>
+
+<script>
+    
+    function verificarDia() {
+        
+        let dia = document.getElementById('diaSemana').value;
+
+        
+        dia = Number(dia);
+
+        
+        switch (dia) {
+            case 1:
+                document.getElementById('resultado').innerText = "1 - Domingo";
+                break;
+            case 2:
+                document.getElementById('resultado').innerText = "2 - Segunda-feira";
+                break;
+            case 3:
+                document.getElementById('resultado').innerText = "3 - Terça-feira";
+                break;
+            case 4:
+                document.getElementById('resultado').innerText = "4 - Quarta-feira";
+                break;
+            case 5:
+                document.getElementById('resultado').innerText = "5 - Quinta-feira";
+                break;
+            case 6:
+                document.getElementById('resultado').innerText = "6 - Sexta-feira";
+                break;
+            case 7:
+                document.getElementById('resultado').innerText = "7 - Sábado";
+                break;
+            default:
+                document.getElementById('resultado').innerText = "Opção inválida. Digite um número de 1 a 7.";
+        }
+    }
+</script>
+
+</body>
+</html>

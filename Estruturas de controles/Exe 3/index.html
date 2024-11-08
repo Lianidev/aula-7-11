@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Laço For - Soma de Números</title>
+</head>
+<body>
+
+<div>
+
+    <input type="number" id="numeroUsuario" placeholder="Digite um número positivo">
+   
+
+    <button onclick="calcularSoma()">Calcular Soma</button>
+   
+    
+    <p id="resultado"></p>
+</div>
+
+<script>
+   
+    function calcularSoma() {
+        
+        let numero = document.getElementById('numeroUsuario').value;
+
+       
+        numero = Number(numero);
+
+        
+        if (numero <= 0) {
+            document.getElementById('resultado').innerText = "Por favor, digite um número positivo.";
+            return;
+        }
+
+       
+        let soma = 0;
+
+        
+        for (let i = 1; i <= numero; i++) {
+            soma += i;
+        }
+
+        
+        document.getElementById('resultado').innerText = "A soma de 1 até " + numero + " é: " + soma;
+    }
+</script>
+
+</body>
+</html>
